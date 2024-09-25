@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* COLORS */
+  --screen-text-color: #000b00;
+  --screen-color: #a3ca7b;
+  --pager-color: #1f201d;
+  --button-color: #565656;
+  --button-text-color: #ffffff;
+  --border-radius: 40px;
+}
+
+body {
+  align-items: center;
+  background-color: #b8e7ed;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  margin: 0 auto 0 auto;
+  max-width: 480px;
+  width: 100%;
+}
+
+.pager {
+  align-items: center;
+  background-color: var(--pager-color);
+  border-radius: var(--border-radius);
+  box-shadow: 3px 5px var(--button-color);
+  display: flex;
+  flex-direction: column;
+  gap: 10%;
+  height: 40%;
+  justify-content: center;
+  padding: 10%;
+  width: 100%;
+}
+
+.screen {
+  background-color: var(--screen-color);
+  border-radius: var(--border-radius);
+  border: 5px solid #5b5c5af6;
+  color: var(--screen-text-color);
+  font-family: "VT323", monospace;
+  font-weight: 700;
+  font-size: 2rem;
+  height: 95%;
+  padding: 5%;
+  width: 95%;
+}
+
+input {
+  background-color: inherit;
+  border: none;
+  font-family: "VT323", monospace;
+  font-weight: 500;
+  font-size: 1.5rem;
+  width: 100%;
+  padding: 5%;
+}
+
+input::placeholder {
+  background-color: var(--screen-color);
+  font: inherit;
+  color: inherit;
+}
+
+.buttons-container {
+  display: flex;
+  gap: 30%;
+  justify-content: center;
+  width: 80%;
+}
+
+button {
+  background-color: var(--button-color);
+  border-radius: var(--border-radius);
+  border: none;
+  box-shadow: 1px 2px;
+  color: var(--button-text-color);
+  font-weight: bold;
+  padding: 5%;
+  width: 50%;
+}
+
+button:active {
+  box-shadow: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  input:placeholder-shown {
+    animation: blink 2s linear infinite;
+  }
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
