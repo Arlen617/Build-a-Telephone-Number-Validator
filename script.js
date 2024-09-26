@@ -4,13 +4,12 @@ const clearBtn = document.getElementById("clear-btn");
 const output = document.getElementById("results-div");
 
 const validRegexArr = [
-  /^1\s\d{3}(-|\s)\d{3}(-|\s)\d{4}$/,
-  /^1\s\(\d{3}\)\s\d{3}-\d{4}$/,
-  /^1\s\d{3}\s\d{3}\s\d{4}$/,
+  /^(1\s)?\d{3}-\d{3}-\d{4}$/,
+  /^(1\s)\(\d{3}\)\s\d{3}-\d{4}$/,
+  /^1\(\d{3}\)\d{3}-\d{4}$/,
+  /^1?\s\d{3}\s\d{3}\s\d{4}$/,
   /^\d{10}$/,
-  /^\d{3}-\d{3}-\d{4}$/,
   /^\(\d{3}\)\d{3}-\d{4}$/,
-  /1\(\d{3}\)\d{3}-\d{4}$/,
 ];
 
 function isValid(array, input) {
@@ -19,7 +18,7 @@ function isValid(array, input) {
       return true;
     }
   }
-  return false
+  return false;
 }
 
 function outputMsg(array, input) {
