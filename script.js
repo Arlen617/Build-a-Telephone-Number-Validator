@@ -46,5 +46,3 @@ clearBtn.onclick = () => {
   output.textContent = "";
   input.value = "";
 };
-
-
